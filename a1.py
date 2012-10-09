@@ -77,7 +77,7 @@ def to_24_hour_clock(hours):
 
 
 ### Write your get_hours function definition here:
-    def get_hours(seconds):
+def get_hours(seconds):
     '''(int) -> int
     Convert time in seconds since midnight to hours.
     This returns in a 24-hour clock format.
@@ -92,12 +92,12 @@ def to_24_hour_clock(hours):
     20
     '''
     
-    return 
+    return to_24_hour_clock((seconds // 60) // 60)
 
 
 ### Write your get_minutes function definition here:
-    
-    '''
+def get_minutes(seconds):
+    '''(int) -> int
     Convert time in seconds to minutes.
     Return minutes since midnight
 
@@ -110,11 +110,12 @@ def to_24_hour_clock(hours):
     >>>get_minutes(73800)
     30
     '''
-
+    
+    return (seconds // 60) % 60
     
 ### Write your get_seconds function definition here:
-
-    '''
+def get_seconds(seconds):
+    '''(int) -> int
     Convert time in seconds to seconds left.
     Return seconds since midnight
 
@@ -128,7 +129,7 @@ def to_24_hour_clock(hours):
     0
     '''
 
-
+    return (seconds % 60) % 60
 
 
 def time_to_utc(utc_offset, time):
@@ -151,7 +152,7 @@ def time_to_utc(utc_offset, time):
     0.0
     '''
 
-
+    return to_24_hour_clock(time - utc_offset)
 
 def time_from_utc(utc_offset, time):
     '''(number, float) -> float
@@ -176,5 +177,5 @@ def time_from_utc(utc_offset, time):
     0.0
     '''
 
-
+    return to_24_hour_clock(time + utc_offset)
 
