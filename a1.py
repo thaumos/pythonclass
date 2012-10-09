@@ -96,7 +96,7 @@ def to_24_hour_clock(hours):
 
 
 ### Write your get_minutes function definition here:
-
+    
     '''
     Convert time in seconds to minutes.
     Return minutes since midnight
