@@ -77,13 +77,24 @@ def to_24_hour_clock(hours):
 
 
 ### Write your get_hours function definition here:
+    def get_hours(seconds):
+    '''(int) -> int
+    Convert time in seconds since midnight to hours.
+    This returns in a 24-hour clock format.
+    
+    >>>get_hours(3800)
+    1
+    >>>get_hours(3600)
+    1
+    >>>get_hours(7999)
+    2
+    >>>get_hours(73800)
+    20
+    '''
+    
+    return 
 
-###    '''
-###    Convert time in 
 
-
-
-###    '''
 ### Write your get_minutes function definition here:
 
 
