@@ -46,8 +46,8 @@ def make_str_from_row(board, row_index):
 
         # Determine the string to output
         s= ""
-        for item in list:
-            s = s + item
+        for character in list:
+            s = s + character
     print(s)
 
 
@@ -60,13 +60,17 @@ def make_str_from_column(board, column_index):
     >>> make_str_from_column([['A', 'N', 'T', 'T'], ['X', 'S', 'O', 'B']], 1)
     'NS'
     '''
-    list = []
     
+    new_list = []
+
+    # Determine the list of characters to capture for our string
+    for i in range(column_index, len(board)):
+        return new_list
     
-        # Determine the string to output
-        s = ""
-        for character in list:
-            s = s + character
+    # Build the list of characters into our string to output
+    s = ""
+    for character in new_list:
+        s = s + character
     print(s)
 
 def board_contains_word_in_row(board, word):
